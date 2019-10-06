@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpack-vue</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript">
+    var login = {
+       template:"<h1>这事登陆组件</h1>",
+    };
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message:'Hellow Vue'
+        },
+        methods:{
+
+        },
+        render:function (createElement) {
+            //createElement是一个方法，能够把指定的模板组件渲染为HTML结构
+            return  createElement(login);
+            //return 结果，会替换页面中el 指定的那个容器，把原来的app删除，使用返回的HTML替换。
+        }
+    });
+</script>
+</body>
+</html>
